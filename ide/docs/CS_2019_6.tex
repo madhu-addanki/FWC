@@ -1,0 +1,211 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage[a4paper,left=1.5cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{watermark} 
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage{fontenc}
+\usepackage{harvard}
+\usepackage{amsfonts}
+\graphicspath{{/storage/emulated/0/Download/FWC/Latex/figs}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\thiswatermark{\centering \put(-15,-100.0){\includegraphics[scale=0.3]{figs/logo.jpg}} }
+\title{\textbf{\textsc{VERIFICATION OF BOOLEAN IDENTITIES}}}
+\author{\textbf{\textit{\teflipflopxtbf{MADHU LATHA ADDANKI (FWC22129)}}}}
+\begin{document}
+
+\date{}
+\maketitle
+\tableofcontents
+
+
+\section{PROBLEM}
+\textbf{(GATE CS-2019)}
+\textbf{Q.6} Which one the following is not a valid identity?
+\begin{enumerate}[label=(\Alph*)]
+	\item $ (x\oplus y)\oplus z = x\oplus (y\oplus z)$
+	\item $ (x + y)\oplus z = x\oplus (y + z)$
+	\item $ x\oplus y = x + y, if xy = 0$
+	\item $ x\oplus y = (xy + x'y')'$
+\end{enumerate}
+\bigskip
+
+\section{COMPONENTS}
+	\begin{tabularx}{0.45\textwidth} {  
+  | >{\centering\arraybackslash}X  
+  | >{\centering\arraybackslash}X  
+  | >{\centering\arraybackslash}X | } 
+\hline 
+\textbf{Component} &  \textbf{Value} & \textbf{Quantity}\\ 
+\hline 
+Arduino & UNO & 1 \\   
+\hline 
+Bread board & - & 1 \\ 
+\hline 
+IC & 7447 & 1 \\
+\hline
+Jumper wires & M-M & 20 \\ 
+\hline 
+SevenSegment Display & - & 1\\ 
+\hline 
+Resistor & 150ohms & 1\\ 
+\hline 
+\end{tabularx}
+\bigskip
+
+\section{INTRODUCTION}
+\paragraph{}
+	An "identity" is merely a relationship that is always true, regardless of the values that any variables involved might take on; similar to laws or properties. Many of these can be analogous to normal multiplication and addition, particularly when the symbols {0,1} are used for {FALSE, TRUE}. 
+\bigskip 
+
+\section{TRUTH TABLE}
+The Truth Table for the above identities is ass follows:
+\begin{enumerate}[label=\textbf{(\Alph*})]
+	\item \textbf{$  (x\oplus y)\oplus z = x\oplus(y\oplus z)$} \\
+where $Y1=(x\oplus y)\oplus z,Y2=x\oplus(y\oplus z)$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{ |c |c |c |c |c |c |} 
+\hline 
+\newline 
+	\textbf{x} & \textbf{y} & \textbf{z} & \textbf{Y1} & \textbf{Y2} & \textbf{Y1==Y2} \\ 
+\hline  
+	0 & 0 & 0 &0 &0 &1\\   
+	0 & 0 & 1 &1 &1 &1\\  
+	0 & 1 & 0 &1 &1 &1\\  
+	0 & 1 & 1 &0 &0 &1\\  
+	1 & 0 & 0 &1 &1 &1\\  
+	1 & 0 & 1 &0 &0 &1\\  
+	1 & 1 & 0 &0 &0 &1\\  
+	1 & 1 & 1 &1 &1 &1\\  
+\hline 
+\end{tabular}
+	\caption{}
+\end{table}
+\bigskip
+\bigskip
+	
+	\item \textbf{$(x+y)\oplus z=x\oplus(y+z)$}\\
+where $Y1=(x+y)\oplus z, Y2=x\oplus(y+z)$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{ |c |c |c |c |c |c |} 
+\hline 
+\newline 
+	\textbf{x} & \textbf{y} & \textbf{z} & \textbf{Y1} & \textbf{Y2} & \textbf{Y1==Y2}\\
+\hline  
+	0 & 0 & 0 &0 &0 &1\\   
+	0 & 0 & 1 &1 &1 &1\\ 
+	0 & 1 & 0 &1 &1 &1\\  
+	0 & 1 & 1 &0 &1 &0\\  
+	1 & 0 & 0 &1 &1 &1\\  
+	1 & 0 & 1 &0 &0 &1\\  
+	1 & 1 & 0 &1 &0 &0\\  
+	1 & 1 & 1 &0 &0 &1\\  
+\hline 
+\end{tabular}
+\caption{}
+\end{table}
+\bigskip
+
+	\item \textbf{$x\oplus y = x + y, if xy = 0 $} \\
+where $Y1=x\oplus y=x+y, if xy=0$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{ |c |c |c |c |c |} 
+\hline 
+\newline 
+\textbf{x} & \textbf{y} & \textbf{Y1} & \textbf{Y2} & \textbf{Y1==Y2} \\ 
+\hline 
+	0 & 0 & 0 &0 &1\\   
+	0 & 1 & 1 &1 &1\\  
+	1 & 0 & 1 &1 &1\\    
+ \hline 
+ \end{tabular}
+	\caption{}
+\end{table}
+\bigskip
+
+	\item \textbf{$ x\oplus y = (xy + x'y')'$}\\
+		where $(xy+x'y')'=(x'+y')(x+y)$\\
+		      $=x\oplus y$\\
+The Truth Table for $x\oplus y$ is as follows:\\
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{ |c |c |c |} 
+\hline 
+\newline 
+\textbf{x} & \textbf{y} & \textbf{$x\oplus y$} \\ 
+\hline 
+ 0 & 0 & 0\\   
+ 0 & 1 & 1\\  
+ 1 & 0 & 1\\  
+ 1 & 1 & 0\\  
+ \hline 
+ \end{tabular}
+	\caption{}
+\end{table}
+\bigskip
+
+\paragraph{}
+	Here, Except \textbf{(B)} identity all other identies are valid according to the mentioned truth tables.
+\end{enumerate}
+\bigskip
+
+\section{ARDUINO CONNECTIONS}
+
+1) The connections between IC 7447 and Seven Segment Display are as follows:
+\begin{table}[ht!] 
+    \centering 
+    \begin{tabular}{|c|c|c|c|c|c|c|c|} 
+    \hline 
+       7447& $\bar a$&$\bar b$&$\bar c$&$\bar d$&$\bar e$&$\bar f$&$\bar g  $ \\ 
+       \hline 
+    DISPLAY& a&b&c&d&e&f&g \\ 
+    \hline 
+    \end{tabular} 
+    \caption{} 
+\end{table} 
+\\
+
+2) The connections between IC 7447 and Arduino are as fllows:
+\begin{table}[ht!] 
+    \centering 
+    \begin{tabular}{|c|c|} 
+    \hline 
+        IC7447&A  \\ 
+         \hline 
+         ARDUINO&2 \\ 
+         \hline 
+    \end{tabular} 
+\caption{} 
+\end{table} 
+\\
+
+3) The inputs \textbf{x,y,z} here are connected to Arduino D5,D6,D7 pins.\\
+
+4) The values for these inputs are conncted either to GND or 5V according to the truth table.\\
+\section{CODE}
+\paragraph{}
+	The arduino code can be downloaded from the below link.
+\begin{center} 
+\fbox{\parbox{8.5cm}{\url{https://github.com/madhu-addanki/FWC/tree/main/ide }}} 
+\end{center}
+
+
+\end{document}
+
