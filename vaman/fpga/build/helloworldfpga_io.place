@@ -1,5 +1,0 @@
-#Block Name x   y   z    pcf_line
-#----- --  --  -    ----
-A       8   3  0  # set_io A  6
-Q      12   3  0  # set_io Q  3
-$iopadmap$helloworldfpga.F  30  32  0  # set_io F  38
