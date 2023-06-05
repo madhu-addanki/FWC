@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Question}{1}{section.1}%
+\contentsline {section}{\numberline {2}Components}{1}{section.2}%
+\contentsline {section}{\numberline {3}formulae}{1}{section.3}%
+\contentsline {paragraph}{\numberline {3.0.0a}Therefore the two propositional logics S1 and S2 formulae are:}{1}{paragraph.3.0.0.1}%
+\contentsline {section}{\numberline {4}Truth table}{1}{section.4}%
+\contentsline {section}{\numberline {5}Boolean epressions}{1}{section.5}%
+\contentsline {section}{\numberline {6}Implementation}{2}{section.6}%
+\contentsline {paragraph}{\numberline {6.0.0a}Procedure}{2}{paragraph.6.0.0.1}%

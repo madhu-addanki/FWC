@@ -1,0 +1,309 @@
+\def\mytitle{ASSIGNMENT}
+\def\myauthor{MADHU LATHA ADDANKI (FWC22129)}
+\def\contact{madhulathaaddanki@gmail.com}
+\def\mymodule{Future Wireless Communications (FWC)}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[cmex10]{amsmath}
+\usepackage{mathtools}
+\singlespacing
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\twocolumn
+
+
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{karnaugh-map}
+\usepackage{pgf}
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{watermark}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\titlespacing{\subsection}{1pt}{\parskip}{3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+%\thiswatermark{\centering \put(400,-128.0){\includegraphics[scale=0.3]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.6em}\mymodule}
+\date{24-03-2023}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+ 
+
+\begin{document}
+
+
+%
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+ \maketitle
+  \tableofcontents
+
+       \section{Question}
+       (GATE CS-2021)\\
+Q.7. Let p and q be two proportions. Consider the following two formulae in propositional logic.
+\begin{center}
+S1: $(\neg{p}\land({p}\lor{q})) \longrightarrow q$\\
+S2: $q \longrightarrow (\neg{p}\land({p}\lor{q}))$
+\end{center}
+S1 and S2 expressions in terms of boolean logic\\
+S1: $p'(p+q) \longrightarrow q = (p'(p+q))'+
+q$\\
+S2: $q \longrightarrow p'(p+q) = q'+p'(p+q)
+$\\
+Which one of the following choices is correct?
+
+\begin{enumerate}
+\item Both S1 and S2 are tautologies.
+\item S1 is a tautology but S2 is not a tautology.
+\item S1 is not a tautology but S2 is a tautology.
+\item Neither S1 nor S2 is a tautology.
+\end{enumerate}
+  \section{Components}
+  \begin{tabularx}{0.4\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+ \textbf{Component}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+ArduinoUNO &  & 1 \\  
+\hline
+JumperWires& M-M & 10 \\ 
+\hline
+Breadboard &  & 1 \\
+\hline
+LED & &2 \\
+\hline
+Resistor &220ohms & 2\\
+\hline
+\end{tabularx}
+
+\begin{center}
+Figure.a
+\end{center}
+
+\section{formulae}
+  A tuatology is a compound statement in Maths which always results in Truth(True) value.\\
+  Tuatology formula:
+\begin{center}
+  $p \longrightarrow q = \neg{p} \lor{q}$
+\end{center}
+where:\\
+$\neg{}$ = Not operation\\
+$\land{}$ = and operation\\
+$\lor{}$ = or opreation\\
+
+   \paragraph{Therefore the two propositional logics S1 and S2 formulae are:}
+S1: $(\neg{p} \land({p}\lor{q})) \longrightarrow q = \neg((\neg{p} \land({p}\lor{q})))\lor{q}$\\
+S2: $q \longrightarrow (\neg{p}\land({p}\lor{q})) = \neg{q} \lor (\neg{p} \land ({p}\lor {q}))$
+
+\section{Truth table}
+
+
+ \begin{table}[h]
+  \centering
+  \caption{Truth table for expression S1}
+   \begin{tabular}{|c|c|c|}
+\hline
+p & q & $\neg((\neg{p} \land({p}\lor{q})))\lor{q}$\\
+\hline
+false & false & true\\
+\hline
+false & true & true\\
+\hline
+true & false & true\\
+\hline
+true & true & true\\
+\hline
+   \end{tabular}
+\end{table}
+	 From the above truth table it is seen that all the outputs are true. Therefore the expression "S1 is a tuatology".\\
+
+\begin{table}[h]
+  \centering
+  \caption{Truth table for expression S2}
+   \begin{tabular}{|c|c|c|}
+\hline
+p & q & $\neg{q} \lor (\neg{p} \land ({p}\lor {q}))$\\
+\hline
+false & false & true\\
+\hline
+false & true & true\\
+\hline                   
+true & false & true\\
+\hline
+true & true & false\\   
+\hline
+\end{tabular}
+\end{table}
+    From the above truth table it is seen that one of the output is false, to meet the tuatology condition all the outputs must be true. Therefore the expression "S2 is not a tuatology".\\
+\section{Boolean epressions}
+ Consider the propositional logic S1:\\
+  Assume the variables p and q as A and B(as there are two expressions with same variables we assume one of the expression with variables A and B).\\
+Therefore the expression S1 becomes as\\
+S1: $(\neg{A} \land({A}\lor{B})) \longrightarrow B = \neg((\neg{A} \land({A}\lor{B})))\lor{B}$\\
+The boolean expression for the propositional expression can be written as:\\
+S1: $A'(A+B) \longrightarrow B = (A'(A+B))'+B$
+\begin{table}[h]
+	\centering
+	\caption{Logical Truth table for expression s1}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	A & B & (A'(A+B))'+B\\
+	\hline
+	0 & 0 & 1\\
+	\hline
+	0 & 1 & 1\\
+	\hline
+	1 & 0 & 1\\
+	\hline
+	1 & 1 & 1\\
+	\hline
+  \end{tabular}
+\end{table}
+
+Consider the propositional logic S2:\\
+  S2: $q \longrightarrow (\neg{p}\land({p}\lor{q})) = \neg{q} \lor (\neg{p} \land ({p}\lor {q}))$
+ The boolean expression for the proportional expression can be written as\\
+ S2: $q \longrightarrow p'(p+q) = q'+p'(p+q)$
+\begin{table}[h]
+	\centering
+	\caption{Logical truth table for expression S2}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		p & q & q'+p'(p+q)\\
+		\hline
+		0 & 0 & 1\\
+		\hline
+		0 & 1 & 1\\
+		\hline
+		1 & 0 & 1\\
+		\hline
+		1 & 1 & 0\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+\section{Implementation}
+
+\begin{table}[h]
+  \centering
+  \caption{connections}
+  \begin{tabular}{|c|c|c|}
+\hline
+Arduino pin & INPUT & OUTPUT\\
+\hline
+2 & A &\\
+\hline
+3 & B &\\
+\hline
+4 & p &\\
+\hline
+5 & q &\\
+\hline
+6 & & C\\
+\hline
+8 & & R\\
+\hline
+  \end{tabular}
+\end{table}
+
+\paragraph{Procedure}
+
+   1. Connect the circuit as per the above table.\\
+   2. Connect the Output pins C and R to the LED's.\\
+   3. Connect the other end of the LED's o the Ground terminal.\\
+   4. Connect inputs to Vcc for logic 1,ground for logic 0.\\
+   5. Execute the circuits using the below code.\\
+   \begin{table}[h]
+	   \centering
+	   \begin{tabular}{|c|}
+	   \hline
+	   https://github.com/madhu-addanki/FWC/tree/\\
+        	main/vaman/arm/code\\
+	   \hline
+	   \end{tabular}
+   \end{table}\\
+   6. Change the values of A,B,P,Q in the code and verify the Truth tables respectively.\\
+
+   Answer is :
+   \textbf{Option2 : S1 is a tautology but S2 is not a tautology.}
+\bibliographystyle{ieeetr}
+\end{document}
