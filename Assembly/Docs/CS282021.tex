@@ -1,0 +1,247 @@
+\def\mytitle{ASSIGNMENT} 
+\def\myauthor{MADHU LATHA ADDANKI (FWC22129)}
+\def\contact{madhulathaaddanki@gmail.com}
+\def\mymodule{Future Wireless Communications (FWC)}
+\documentclass[journal,12pt]{article}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[cmex10]{amsmath}
+\usepackage{mathtools}
+\singlespacing
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}
+\graphicspath{{/sdcard/Download/latex/CS282021/trunk/figures}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{karnaugh-map}
+\usepackage{pgf}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{watermark}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\titlespacing{\subsection}{1pt}{\parskip}{3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+\begin{figure}[#1]
+\centering
+\includegraphics[width=#5\columnwidth]{#2}
+\caption[#3]{\textbf{#3}#4}
+\label{fig:#2}
+\end{figure}
+}
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.6em}\mymodule}
+\date{02-06-2023}
+\def\inputGnumericTable{}                
+\lstset{
+frame=single,
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{article}
+\vspace{3cm}
+\maketitle
+\tableofcontents
+\pagebreak
+\section{Question}
+       Consider a $3$ bit counter,designed using $T$ flip-flops,as shown below:
+\begin{figure}[h]
+	\centering
+        \input{figures/fig1.tex}
+        \caption{}
+        \label{figs:tflipflop.}
+\end{figure}	
+       Assuming the initial state of the counter given by $PQR$ as $000$, what are the next three states?
+\section{Components}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+	\textbf{Component}& \textbf{values} & \textbf{Qantity}\\
+\hline
+	Arduino & UNO & 1 \\
+\hline
+	Jumperwires & M-M & 35 \\
+\hline
+	Breadboard & & 2 \\
+\hline
+	LED & & 3\\
+\hline
+	Resistor & 220ohms & 3 \\
+\hline
+	IC & 7476 & 3 \\
+\hline
+\end{tabular}
+\end{table}
+\begin{center}
+Figure.a
+\end{center}
+\section{TruthTable}
+\centering
+\begin{tabularx}{0.46\textwidth} {
+                | >{\centering\arraybackslash}X
+                | >{\centering\arraybackslash}X
+                | >{\centering\arraybackslash}X
+                | >{\centering\arraybackslash}X | }
+\hline
+\textbf{T} & \textbf{Q} & \textbf{Q'}\\
+\hline
+0 & Q & Q' \\
+\hline
+1 & Q' & Q \\
+\hline
+\end{tabularx}
+\begin{center}
+Truth table for "T" flipflop	
+\end{center} 
+\section{ExcitationTable}
+\centering
+  \begin{tabularx}{0.46\textwidth} {
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+\textbf{Q} & \textbf{Qn} & \textbf{T}\\
+\hline
+0 & 0 & 0 \\
+\hline
+0 & 1 & 1 \\
+\hline
+1 & 0 & 1 \\
+\hline
+1 & 1 & 0 \\
+\hline
+\end{tabularx}
+\begin{center}
+Excitation table of T- flipflop
+\end{center}
+\section{Truthtable(3-stages)}
+  \begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{P} & \textbf{Q} & \textbf{R} & \textbf{P+} & \textbf{Q+} & \textbf{R+} \\
+ \hline
+ 0 & 0 & 0 & 0 & 1 & 1 \\
+ \hline
+ 0 & 1 & 1 & 1 & 0 & 1 \\
+\hline
+ 1 & 0 & 1 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+\end{table}
+\begin{center}
+Figure :b
+\end{center}
+\pagebreak
+\section{3stages}
+\begin{figure}[ih]
+	\centering	
+	\input{figures/fig2.tex}
+	\caption{}
+	\label{fig:2.}
+\end{figure}
+\begin{figure}[ih]
+        \centering
+        \input{figures/fig3.tex}
+        \caption{}
+        \label{fig:3.}
+\end{figure}
+\begin{figure}[ih]
+        \centering
+        \input{figures/fig4.tex}
+        \caption{}
+        \label{fig:4.}
+\end{figure}
+\vspace{5mm}
+\newpage
+\section{Hardware}
+        The 7476 is a master—slave J-K and the 74LS76 is a negative edge-triggered J-K flip-flop. Both chips have the same pin configuration. Below is the pin diagram of IC7476. \\
+\begin{figure}[ih]
+	\centering
+	\input{figures/pindiagram.tex}
+	\caption{}
+	\label{pindiagram.}
+\end{figure}
+\section{Implementation}
+The connections between Arduino UNO and three IC 7476 is given in below Table \\
+\begin{table}[h]
+	\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline & \multicolumn{3}{|c|}{INPUT} & \multicolumn{3}{|c|}{OUTPUT} & CLOCK & Vcc & GND \\
+		\hline ARDUINO & D2 & D3 & D4 & D5 & D6 & D7 & 13 & 5V & GND \\
+		\hline 7476 & \multicolumn{3}{|c|}{16} & \multicolumn{3}{|c|}{15} & 1 & 5 & 13 \\
+		\hline
+	\end{tabular}
+	\end{center}
+	\caption{connections}
+	\label{table:1}
+\end{table}
+\section{Procedure}
+\begin{raggedright}
+    1.Connect the circuit as per the above tble.\\
+    2.connect the output pins to the LED's \\
+    3.Connect inputs to Vcc for logic 1,ground for logic 0 \\
+    4.Execute the circuit using the below code.\\
+\begin{table}[h]
+\centering
+	\begin{tabular}{|c|}
+	\hline
+	https://github.com/madhu-addanki/FWC/tree/main/Assembly/code\\
+	\hline
+\end{tabular}
+\end{table}
+     5.Change the values of Q1,Q2,Q3 in the code and verify the truth table \\
+\end{raggedright}
+\bibliographystyle{article}
+\end{document}
+
