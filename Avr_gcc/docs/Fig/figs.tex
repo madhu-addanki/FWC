@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\ctikzset{
+    logic ports=ieee,
+    logic ports/scale=0.8,
+    logic ports/fill=gray
+}
+ 
+\node[not port] (nota) at (0,0){};
+\node[and port] (anda) at (2.5,-1){};
+\node[or port]  (ora) at (4.5,-2){};
+ 
+\draw (nota.out) -| (anda.in 1);
+\draw (anda.out) -| (ora.in 1);
+ 
+\draw (ora.out) -- ++(1,0) node[near end,above]{z};
+ 
+\draw (nota.in 1) -- ++(-1.5,0)node[left]{b};
+\draw (anda.in 2) -- ++(-1.5,0)node[left]{c};
+\draw (ora.in 2) -- ++(-1.5,0)node[left] {a};
+ 
+\end{tikzpicture}
