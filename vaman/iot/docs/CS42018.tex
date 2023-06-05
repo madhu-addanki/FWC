@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage[a4paper,left=1.5cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{watermark} 
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage{fontenc}
+\usepackage{harvard}
+\usepackage{amsfonts}
+\graphicspath{{/storage/emulated/0/Download/codes/doc/figs}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\title{\textbf{\textsc{VERIFICATION OF BOOLEAN IDENTITIES}}}
+\author{\textbf{\textit{\teflipflopxtbf{MADHU LATHA ADDANKI(FWC22129) }}}}
+\begin{document}
+
+\date{2 June 2023}
+\maketitle
+\tableofcontents
+
+
+\section{PROBLEM}
+\textbf{(GATE CS-2018)}
+\textbf{Q.4} Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations,respectively. Which one of the following is NOT CORRECT?
+\begin{enumerate}[label=(\Alph*)]
+	\item $ (P\oplus Q)^{\prime} = (P\odot Q)$
+	\item $ (P^{\prime}\oplus Q) = (P\odot Q)$
+	\item $ (P^{\prime}\oplus Q^{\prime}) = (P\oplus Q)$
+	\item $ (P\oplus P^{\prime})\oplus Q = (P\odot P^{\prime})\odot Q^{\prime}$
+\end{enumerate}
+\bigskip
+
+\section{COMPONENTS}
+	\begin{tabularx}{0.45\textwidth} {  
+  | >{\centering\arraybackslash}X  
+  | >{\centering\arraybackslash}X  
+  | >{\centering\arraybackslash}X | } 
+\hline 
+\textbf{Component} &  \textbf{Value} & \textbf{Quantity}\\ 
+\hline 
+Arduino & UNO & 1 \\   
+\hline 
+Bread board & - & 1 \\ 
+\hline
+Jumper wires & M-M & 8 \\ 
+\hline
+ LED & - & 2 \\
+\hline 
+Resistor & 150ohms & 2\\ 
+\hline 
+\end{tabularx}
+\bigskip
+ 
+ \section{INTRODUCTION}
+\paragraph{}
+	An "identity" is merely a relationship that is always true, regardless of the values that any variables involved might take on; similar to laws or properties. Many of these can be analogous to normal multiplication and addition, particularly when the symbols {0,1} are used for {FALSE, TRUE}. 
+\bigskip 
+	
+\section{TRUTH TABLE}
+The Truth Table for the above identities is as follows:
+\begin{enumerate}[label=\textbf{(\Alph*})]
+	\item \textbf{$ (P\oplus Q)^{\prime} = (P\odot Q)$} \\
+where $Y1=(P\oplus Q)^{\prime}, Y2=(P\odot Q)$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{ |c |c |c |c |} 
+\hline 
+\newline 
+	\textbf{P} & \textbf{Q} & \textbf{Y1} & \textbf{Y2} \\ 
+\hline
+	0 & 0 &1 &1\\   
+	0 & 1 &0 &0\\  
+	1 & 0 &0 &0\\  
+	1 & 1 &1 &1\\  
+\hline 
+\end{tabular}
+	\caption{}
+\end{table}
+\bigskip
+\bigskip
+
+	\item \textbf{$(P^{\prime}\oplus Q)=(P\odot Q)$}\\
+where $Y1=(P^{\prime}\oplus Q), Y2=(P\odot Q)$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{ |c |c |c |c |} 
+\hline 
+\newline 
+	\textbf{P} & \textbf{Q} & \textbf{Y1} & \textbf{Y2}\\
+\hline  
+	0 & 0 &1 &1\\   
+	0 & 1 &0 &0\\ 
+	1 & 0 &0 &0\\  
+	1 & 1 &1 &1\\
+\hline 
+\end{tabular}
+\caption{}
+\end{table}
+\bigskip
+
+
+\item \textbf{$(P^{\prime}\oplus Q^{\prime}) = (P\oplus Q)$} \\ where $Y1=(P^{\prime}\oplus Q^{\prime}), Y2=(P\oplus Q)$\\
+\bigskip
+\begin{table}[h]
+	\centering
+\begin{tabular}{ |c |c |c |c |} 
+\hline 
+\newline 
+\textbf{P} & \textbf{Q} & \textbf{Y1} & \textbf{Y2}\\ 
+\hline 
+	0 & 0 &0 &0\\   
+	0 & 1 &1 &1\\  
+	1 & 0 &1 &1\\
+	1 & 1 &0 &0\\
+ \hline 
+ \end{tabular}
+	\caption{}
+\end{table}
+
+	\item \textbf{$(P\oplus P^{\prime})\oplus Q = (P\odot P^{\prime})\odot Q^{\prime}$ }\\
+where $Y1=(P\oplus P^{\prime})\oplus Q,Y2=(P\odot
+    P^{\prime})\odot Q^{\prime}$\\
+\bigskip
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{ |c |c |c |c |} 
+\hline 
+\newline 
+		\textbf{P} & \textbf{Q} & \textbf{Y1} &  \textbf{Y2}\\ 
+\hline 
+		0 & 0 &1 &0\\   
+ 		0 & 1 &0 &1\\  
+ 		1 & 0 &1 &0\\  
+ 		1 & 1 &0 &1\\  
+ \hline 
+ \end{tabular}
+	\caption{}
+\end{table}
+\bigskip
+
+\paragraph{}
+	Here, Except \textbf{(D)} identity all other identies are valid according to the mentioned truth tables.
+\end{enumerate}
+\bigskip
+
+\section{Implementation}
+\begin{table}[h]
+  \centering
+  \caption{connections}
+  \begin{tabular}{|c|c|c|}
+\hline
+Arduino pin & INPUT & OUTPUT\\
+\hline
+5 & P &\\
+\hline
+6 & Q &\\
+\hline
+2 & & C\\
+\hline
+3 & & R\\
+\hline
+  \end{tabular}
+\end{table}
+
+\section{Procedure}
+\paragraph{}
+
+   1. Connect the circuit as per the above table.\\
+   2. Connect the Output pins C and R to the LED's.\\
+   3. Connect the other end of the LED's to the Ground terminal.\\
+   4. Connect inputs to Vcc for logic 1,ground for logic 0.\\
+   5. Execute the circuits using the below code.\\
+   6. Change the values of P,Q in the code and verify the Truth tables respectively.\\
+
+\section{CODE}
+	The arduino code can be downloaded from the below link.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+                 https://github.com/madhu-addanki\\
+            /FWC/tree/main/vaman/iot/code\\
+		 \hline
+	\end{tabular}
+\end{table}
+
+\end{document}
